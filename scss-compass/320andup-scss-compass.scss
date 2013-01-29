@@ -1,0 +1,124 @@
+// 1. ROOT 					==============================
+
+// Compass
+@import "compass";
+
+// CSS reset
+@import "reset";
+
+// Variables and mixins
+@import "variables";
+@import "mixins";
+
+// Site wide styles (html, body)
+@import "site";
+
+// 2. TYPOGRAPHY 			==============================
+
+// Block level (h1, p) and text-level (em, strong) type
+@import "typography";
+
+// 3. COLOUR 				==============================
+
+// Colour interaction semantics
+@import "colour";
+
+// 4. TEXTURE 				==============================
+
+// Alerts, badges, boxes and gradients
+@import "texture";
+
+// Font Awesome icon fonts (optional)
+//@import "font-awesome";
+
+// 5. ELEMENTS 				==============================
+
+// Figures, images and other elements
+@import "elements";
+
+// Standard form controls
+//@import "forms";
+
+// Button styles (optional)
+@import "buttons";
+
+// Tables
+//@import "tables";
+
+// 6. LAYOUT 			==============================
+
+// Page level layout styles (banner, navigation, content, contentinfo)
+@import "page";
+
+//  7. VENDOR-SPECIFIC 		==============================
+//  8. MODERNIZR 			==============================
+
+// @import "modernizr";
+
+//  9. TEMPLATE SPECIFICS 	==============================
+//  10. MEDIA QUERIES 		==============================
+
+@media print {
+@import "print";
+}
+
+// 480px
+@media only screen and (min-width: 480px) {
+@import "480";
+}
+
+// 600px
+@media only screen and (min-width: 600px) {
+@import "600";
+}
+
+// 768px
+@media only screen and (min-width: 768px) {
+@import "768";
+}
+
+// 992px
+@media only screen and (min-width: 992px) {
+@import "992";
+}
+
+// 1382px
+@media only screen and (min-width: 1382px) {
+@import "1382";
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	[role="banner"] {
+		background: {
+		image: url("../img/640_bg.jpg");
+		position: center top;
+		attachment: fixed; }
+		@include background-size(contain);
+	}
+}
+
+// phone (landscape)
+@media only screen and (max-height: 320px) and (orientation: landscape) {
+	header h1 { padding-top: 1.97701%; }
+	header h1 span { display: inline-block; }
+	div#donate { padding-top: 2.5%; }
+}
+
+// tall screen (desktop/ipad)
+@media only screen and (min-height: 720px) {
+	header[role="banner"] {
+		@include background-size(cover);
+	}
+}
+
+// 2x
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+@import "2x"; }
+
+//  11. UPSTARTS 			==============================
+
+// Modules and panels
+@import "upstarts/320andup-modules/upstart";

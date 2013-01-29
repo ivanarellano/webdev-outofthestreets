@@ -1,0 +1,177 @@
+// ==========================================================
+
+// 320 and Up by Andy Clarke
+// Version: 3.0
+// URL: http://stuffandnonsense.co.uk/projects/320andup/
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+// ==========================================================
+
+/* Site =================================================== */
+
+// 1. ROOT 					==============================
+
+@-webkit-viewport { 
+width : device-width; }
+
+@-moz-viewport { 
+width : device-width; }
+
+@-ms-viewport { 
+width : device-width; }
+
+@-o-viewport { 
+width : device-width; }
+
+@viewport { 
+width : device-width; }
+
+html {
+background: $bodycolor;
+font-size : 0.625em; //10px; //62.5%;
+-webkit-overflow-scrolling : touch;
+-webkit-tap-highlight-color : lighten($basecolor, 75%);
+-webkit-text-size-adjust : 100%;
+-ms-text-size-adjust : 100%; }
+
+body {
+margin : 0;
+padding : 0;
+width : 100%;
+background-color : transparent;
+font-family : $basefont;
+@include font-size();
+line-height : $baselineheight;
+color : $textcolor;
+overflow-x: hidden; }
+
+
+html, body { height: 100%; }
+
+// 2. TYPOGRAPHY 			==============================
+
+@import "fonts";
+
+header h1 { 
+	display: inline-block; 
+	text-transform: capitalize;
+	color: $white;
+	padding: 9.124767225326% 19.770114942529% 0 $gutterwidthpercent;
+	width: 100%;
+	@include box-sizing(border-box);
+}
+
+header h1 span {
+	display: block;	
+	font-family: "ArvoItalic";
+	font-style: normal;
+	text-transform: lowercase;
+}
+
+figcaption.earned {
+	font-family: "LatoBold";
+	font-weight: 700;
+	@include font-size(13);
+	margin-bottom : 1.8em;
+	text-align: center;
+	color: darken($red, 35%);
+}
+
+[role="main"] {
+	p { 
+		margin: 0 $gutterwidthpercent $gutterwidth $gutterwidthpercent;
+	}
+}
+
+p.h4 {
+	font-family: "ArvoBold";
+	font-weight: 700;	
+}
+
+// 3. COLOUR 				==============================
+// 4. TEXTURE 				==============================
+
+$metercolorlist : $red $orange $yellow $green $blue;
+$metergreyscalelist : $darkergrey $darkgrey $grey $lightgrey $lightergrey;
+$classslugs : a b c d e;
+
+@for $i from 1 through 5 {
+	$cs : nth($classslugs, $i);
+	.#{$cs} { 
+		background-color: nth($metercolorlist, $i);
+	}
+
+	.grey .#{$cs} { 
+		background-color: desaturate(nth($metercolorlist, $i), 35%);
+	}
+}
+
+// 5. ELEMENTS 				==============================
+
+#meter {
+	span.grey, 
+	figcaption.earned,
+	span.notch {
+		position: absolute;
+		width: 100%;
+	}
+	span.grey {
+		left: -15%;
+		height: 100%;
+		z-index: 2;
+	}
+	figcaption.earned {
+		z-index: 3;
+		bottom: 0;
+		margin: 0;
+		height: $earnedpercent; // MOVES % EARNED
+	}
+	span.notch {
+		height: 100%;
+		z-index: 3;
+		div {
+			width: 33%;
+			height: 1.2%;
+			position: absolute;
+			right: 0;
+			background-color: $black; }
+	}
+}
+
+span.notch { 
+	.a { top: 79.5%; }
+	.b { top: 59.5%; }
+	.c { top: 39.5%; }
+	.d { top: 19.5%; }		
+}
+
+// 6. LAYOUT 				==============================
+
+#mainpage {
+	width: $mainpagewidth;
+	height: 100%;
+	margin-left: $meterwidth;
+	@include box-sizing(border-box);
+}
+
+#meter {
+	width: $meterwidth;
+	min-height: 100%;
+	position: fixed;
+	div {
+		height: $meterblockheight;
+	}
+}
+
+[role="banner"] {
+	width: 100%;
+	height: $headerheight;
+}
+
+[role="contentinfo"] {
+	margin: 0 $gutterwidthpercent 0 $gutterwidthpercent;
+}
+
+// 7. VENDOR-SPECIFIC 		==============================
+// 8. MODERNIZR 			==============================
+// 9. TEMPLATE SPECIFICS 	==============================

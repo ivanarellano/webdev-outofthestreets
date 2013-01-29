@@ -1,0 +1,83 @@
+// ==========================================================
+
+// 320 and Up by Andy Clarke
+// Version: 3.0
+// URL: http://stuffandnonsense.co.uk/projects/320andup/
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+// ==========================================================
+
+// IPAD PORTRAIT
+/* 768 =================================================== */
+
+// 1. ROOT 					==============================
+// 2. TYPOGRAPHY 			==============================
+
+header h1 {
+	padding-top: 5.12477%;
+}
+
+figcaption.earned {
+	@include font-size(19);
+}
+
+.grid p.h4 {
+	text-align: left;
+	@include font-size(20);
+	margin-left: 1.2em;
+}
+
+// 3. COLOUR 				==============================
+// 4. TEXTURE 				==============================
+
+[role="banner"] {
+	background: {
+	image: url("../img/1280_bg.jpg"); }
+	@include background-size(cover);
+}
+
+// 5. ELEMENTS 				==============================
+
+#donate a {
+	padding: 3.65823% 0;
+	margin-bottom: 0;
+}
+
+#donate {
+	padding: 1.625em 5.97701%;
+}
+
+[role="main"] p {
+	margin: 1.625em;
+}
+
+.grid-1.featured-image {
+	height: 10em;
+}
+
+.featured-grid {
+	margin: 1.8em 0;
+	padding-bottom: 1.2em;
+}
+
+.content .featured-grid:last-child {
+	padding-bottom: 0;
+}
+
+// 6. LAYOUT 				==============================
+
+[role="main"] .grids-two .grid {
+	width: 50%;
+}
+
+[role="contentinfo"] {
+	margin: 2.97701% 5.97701% 0 5.97701%;
+}
+
+.featured-image {
+	height: 10em;
+}
+
+// 7. VENDOR-SPECIFIC 		==============================
+// 8. MODERNIZR 			==============================
+// 9. TEMPLATE SPECIFICS 	==============================

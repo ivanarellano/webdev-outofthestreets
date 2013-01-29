@@ -1,0 +1,45 @@
+// ==========================================================
+
+// 320 and Up by Andy Clarke
+// Version: 3.0
+// URL: http://stuffandnonsense.co.uk/projects/320andup/
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+// ==========================================================
+
+// IPAD LANDSCAPE
+/* 992 =================================================== */
+
+// 1. ROOT 					==============================
+// 2. TYPOGRAPHY 			==============================
+
+header h1 {
+	padding-top: 3.12477%;
+}
+
+.grid p.h4 {
+	@include font-size(21);
+	margin-left: 1.2em;
+}
+
+p, small {
+	@include font-size(16);
+}
+
+// 3. COLOUR 				==============================
+// 4. TEXTURE 				==============================
+// 5. ELEMENTS 				==============================
+// 6. LAYOUT 				==============================
+
+.grids-two {
+	&.grid-1 {
+		width: 40%;
+	}
+	&.grid-2 {
+		width: 60%;
+	}
+}
+
+// 7. VENDOR-SPECIFIC 		==============================
+// 8. MODERNIZR 			==============================
+// 9. TEMPLATE SPECIFICS 	==============================

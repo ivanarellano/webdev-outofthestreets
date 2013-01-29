@@ -1,0 +1,39 @@
+/* Buttons =================================================== */
+
+.btn-blue {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  color: $white;
+  font-family: $basefont;
+  line-height: $baselineheight;
+  text-align: center;
+  @include font-size(13);  
+  text-shadow: 1px 1px 0 #176a97;
+
+  @include vertical(#338cba, darken(#0e7bb3, 2%));
+  -webkit-box-shadow: inset 0 2px 0 0 #74bdd9;
+  box-shadow: inset 0 2px 0 0 #74bdd9;
+  
+  &:hover {
+    @include vertical(#338cba, darken(#0e7bb3, 8%));
+    cursor: pointer;
+  }
+
+  &:active {
+    @include vertical(darken(#338cba, 5%), darken(#0e7bb3, 17%)); 
+    -webkit-box-shadow: inset 0 0 6px 2px lighten(#74bdd9, 10%);
+    box-shadow: inset 0 0 6px 2px lighten(#74bdd9, 10%); 
+  }
+
+  &:visited {
+    color: $white;
+  }
+}
+
+.btn-info {
+  font-family: $baseheadingfont;
+  @include font-size(15);
+  text-transform: uppercase;  
+}

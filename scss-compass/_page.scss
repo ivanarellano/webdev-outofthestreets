@@ -1,0 +1,100 @@
+// ==========================================================
+
+// 320 and Up by Andy Clarke
+// Version: 3.0
+// URL: http://stuffandnonsense.co.uk/projects/320andup/
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+// ==========================================================
+
+#donate a {
+	font-family: "ArvoRegular";
+	font-style: normal;
+	font-weight: 400;
+}
+
+.intro em {
+	font-family: "ArvoItalic";
+	font-style: normal;
+	font-weight: 400;
+	margin: .8em 0;
+	display: block;
+	color: darken(desaturate($green, 10%), 9%);
+}
+
+em.fancy {
+	margin-left: .4em;
+}
+
+#donate a {
+	width: 100%;
+	border: 0;
+	padding: 1.65823% 0;
+	margin-bottom: 3%;
+	display: inline-block;
+}
+
+.fb_edge_widget_with_comment {
+	top: -4px;
+	margin-right: 5.5%;
+}
+
+#___plusone_0 {
+	width: 60px !important;
+	margin-right: 5.5% !important;
+}
+
+.twitter-share-button {
+	width: 80px !important;
+}
+
+#social-media-list {
+	text-align: center;
+	list-style-type: none;
+	text-transform: lowercase;
+	margin-bottom: .3em;
+
+	li {
+		display: inline-block;
+		margin-right: 1em;
+	}
+
+	a {
+		font-size: 1.4em;
+		display: table-row;
+
+		span {
+			font-size: .7em;
+			display: table-cell;
+			vertical-align: middle;
+			padding-left: .3em;
+		}
+	}
+}
+
+#donate {
+	padding: $gutterwidthpercent;
+	padding-bottom: 0;
+	//margin: 0 0 1% 0;
+	@include box-sizing(border-box);	
+}
+
+.featured-grid {
+	margin: 1em 0;
+	img {
+		max-height: 13.5em;
+		height: 100%;
+	}
+}
+
+.grid-1.featured-image {
+	text-align: center;
+	border: 0;
+	height: 8em;
+}
+
+.grid-2 p.h4{
+	margin-top: 0;
+	margin-bottom: 0.7em;
+	text-align: center;
+}
