@@ -1,0 +1,264 @@
+<!doctype html>
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+
+<title>{Title}</title>
+
+<meta name="author" content="Ivan Arellano">
+{block:Description}
+    <meta name="description" content="{MetaDescription}" />
+{/block:Description}
+
+<meta name="text:Progress Percentage" content=""/>
+<meta name="text:Google Analytics ID" content=""/>
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+
+<link rel="stylesheet" href="http://ivanarellano.com/run/css/320andup-scss-compass.css">
+
+<!--[if (lt IE 9) & (!IEMobile)]>
+<script src="http://ivanarellano.com/run/js/selectivizr-min.js"></script>
+<![endif]-->
+
+<!--<script src="http://ivanarellano.com/run/js/modernizr-2.5.3-min.js"></script>-->
+
+<link rel="shortcut icon" href="http://ivanarellano.com/run/favicon.png">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<meta http-equiv="cleartype" content="on">
+</head>
+
+
+<body role="document" class="clearfix">
+    <figure id="meter">
+        <figcaption class="earned">{text:Progress Percentage}%</figcaption>
+
+        <span class="notch">
+            <div class="d"></div><div class="c"></div>
+            <div class="b"></div><div class="a"></div>
+        </span>
+
+        <span class="grey">
+            <div class="e"></div><div class="d"></div>
+            <div class="c"></div><div class="b"></div>
+            <div class="a" style="height:13.3%"></div>  
+        </span> 
+
+        <span class="color">
+            <div class="e"></div><div class="d"></div>
+            <div class="c"></div><div class="b"></div>
+            <div class="a"></div>
+        </span>
+    </figure>
+
+<div id="mainpage">
+    <header role="banner" class="clearfix">
+        <h1>Ivan Arellano <span>is running for</span> education <span>to raise</span> $1500</h1>
+    </header>
+
+    <div id="main" class="clearfix"> 
+
+    <aside role="complementary">
+        <div class="grids grids-two clearfix">
+            <div class="grid grid-1 clearfix">
+
+                <div id="donate" class="clearfix">
+                    <a href="http://www.crowdrise.com/ivanruns/fundraiser/ivan/donate" target="_blank" class="btn-blue btn-info">Donate</a>
+                </div>
+                <ul id="social-media-list">
+                    <li><a href="https://www.facebook.com/outofthestreets" class="icon-facebook"><span>Facebook<span></a></li>
+                    <li><a href="https://twitter.com/share?url=http://run.ivanarellano.com&via=hubbu" target="_blank" class="icon-twitter"><span>Tweet</span></a></li>
+                </ul>
+
+            </div>
+            <div class="grid grid-2 intro clearfix">
+
+                <p>Running 13.1 miles isn't easy, which is why I've signed up for a half-marathon on April 14, 2013. Through training and motivation to get in shape, I'll be hitting the track once more to cross the finish line. <em>But I can't compete alone.</em></p><p> Your donation, no matter the size, will benefit my cause and go further than my mileage this event. <!--That alone keeps me chasing for more.-->
+                </p>
+            </div>
+        </div>
+
+        <div class="grids grids-two featured-grid clearfix">
+            <div class="grid grid-1 featured-image clearfix">
+
+                <img src="http://ivanarellano.com/run/img/cityyear-c.svg" alt="City Year">
+            </div>
+            <div class="grid grid-2 clearfix">
+
+                <h4>Help students succeed</h4>
+                <p>All proceeds will benefit <a href="http://www.cityyear.com">City Year</a>, a national nonprofit which is working to keep students in-school and on-track for a successful high school graduation.</p>
+                <p>Working side-by-side with teachers and students, corps members will engage students in tutoring with reading and math, and by providing after school programming.</p>
+            </div>
+            
+        </div>
+
+        <div class="grids grids-two featured-grid clearfix">
+            <div class="grid grid-1 featured-image clearfix">
+
+                <img src="http://ivanarellano.com/run/img/watch.svg" alt="1 Face Watch">
+            </div>
+            <div class="grid grid-2 clearfix">
+
+                <h4>Water you waiting for?</h4>
+                <p>Donate $10 or more for a chance to win a <a href="http://1facewatch.com/">1:face Water watch</a>.</p>
+            </div>
+            
+        </div>
+    </aside>
+
+    <section role="main">
+        {block:Posts}
+            {block:Text}
+                <article role="article" class="text">
+                    {block:Title}
+                        <h3><a href="{Permalink}">{Title}</a></h3>
+                    {/block:Title}
+
+                    {Body}
+                </article>
+            {/block:Text}
+
+            {block:Photo}
+                <article role="article" class="photo">
+                    <figure>
+                    <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+
+                    {block:Caption}
+                        <figcaption>{Caption}</figcaption>
+                    {/block:Caption}
+                    </figure>
+                </article>
+            {/block:Photo}
+
+            {block:Panorama}
+                <article role="article" class="panorama">
+                    <figure>
+                    {LinkOpenTag}
+                        <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                    {LinkCloseTag}
+
+                    {block:Caption}
+                        <figcaption>{Caption}</figcaption>
+                    {/block:Caption}
+                    </figure>
+                </article>
+            {/block:Panorama}
+
+            {block:Photoset}
+                <article role="article" class="photoset">
+                    <figure>
+                    {Photoset-500}
+
+                    {block:Caption}
+                        <figcaption>{Caption}</figcaption>
+                    {/block:Caption}
+                    </figure>
+                </article>
+            {/block:Photoset}
+
+            {block:Quote}
+                <article role="article" class="quote">
+                    <blockquote>"{Quote}"</blockquote>
+
+                    {block:Source}
+                        <cite>{Source}</cite>
+                    {/block:Source}
+                </article>
+            {/block:Quote}
+
+            {block:Link}
+                <article role="article" class="link">
+                    <a href="{URL}" class="link" {Target}>{Name}</a>
+
+                    {block:Description}
+                    <p>{Description}</p>
+                    {/block:Description}
+                </article>
+            {/block:Link}
+
+            {block:Chat}
+                <article role="article" class="chat">
+                {block:Title}
+                    <h3><a href="{Permalink}">{Title}</a></h3>
+                {/block:Title}
+
+                <ul class="chat">
+                    {block:Lines}
+                        <li class="{Alt} user_{UserNumber}">
+                            {block:Label}
+                                <span class="label">{Label}</span>
+                            {/block:Label}
+
+                            {Line}
+                        </li>
+                    {/block:Lines}
+                </ul>
+                </article>
+            {/block:Chat}
+
+            {block:Video}
+                <article role="article" class="video">
+                    {Video-500}
+
+                    {block:Caption}
+                        <p>{Caption}</p>
+                    {/block:Caption}
+                </article>
+            {/block:Video}
+
+            {block:Audio}
+                <article role="article" class="audio">
+                    {AudioPlayerBlack}
+
+                    {block:Caption}
+                        <p>{Caption}</p>
+                    {/block:Caption}
+                </article>
+            {/block:Audio}
+
+        {/block:Posts}
+    </section>
+
+    </div> <!--end #main-->
+
+    <footer role="contentinfo">
+        <div class="footer_pagination">
+            {block:PreviousPage}
+                <a href="{PreviousPage}">&#171; Previous</a>
+            {/block:PreviousPage}
+
+            {block:NextPage}
+                <a href="{NextPage}">Next &#187;</a>
+            {/block:NextPage}
+
+            <a href="/archive">Archive</a>
+        </div>
+
+        <small>&copy; 2013 All Rights Reserved.<br>
+        Website by <a href="http://ivanarellano.com">Ivan Arellano</a>.
+        </small>
+    </footer>
+
+</div> <!--end #mainpage-->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.8.3.min.js"><\/script>')</script>
+
+<script src="http://ivanarellano.com/run/js/script.js"></script>
+
+{block:IfGoogleAnalyticsID}
+<script>
+var _gaq=[['_setAccount','{text:Google Analytics ID}'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+s.parentNode.insertBefore(g,s)}(document,"script"));
+</script>
+{/block:IfGoogleAnalyticsID}
+</body>
+</html>
