@@ -29,7 +29,7 @@
 <meta http-equiv="cleartype" content="on">
 </head>
 
-<body class="clearfix">
+<body role="document" class="clearfix">
 
 <figure id="meter">
 	<figcaption class="earned">6%</figcaption>
@@ -58,12 +58,9 @@
 	</header>
 
 
-	<div id="main"> <!-- start main -->
+<div id="main" class="clearfix"> 
 
-	<aside role="complementary"></aside>
-
-	<section role="main" class="content clearfix">
-
+	<aside role="complementary">
 		<div class="grids grids-two clearfix">
 			<div class="grid grid-1 clearfix">
 
@@ -78,9 +75,8 @@
 			</div>
 			<div class="grid grid-2 intro clearfix">
 
-				<p>Running 13.1 miles isn't easy, which is why I've signed up for a half-marathon on April 14, 2013. Through training and motivation to get in shape, I'll be hitting the track once more to cross the finish line. <em>But I can't compete alone.</em></p><p> Your donation, no matter the size, will benefit my cause and go further than my mileage this event. <!--That alone keeps me chasing for more.-->
+				<p>Running 13.1 miles isn't easy, which is why I've signed up for a half-marathon on April 14, 2013. Through training and motivation to get in shape, I'll be hitting the track once more to cross the finish line. <em class="h5">But I can't compete alone.</em></p><p> Your donation, no matter the size, will benefit my cause and go further than my mileage this event. <!--That alone keeps me chasing for more.-->
 				</p>
-				
 			</div>
 		</div>
 
@@ -91,7 +87,7 @@
 			</div>
 			<div class="grid grid-2 clearfix">
 
-				<p class="h4">Help students succeed</p>
+				<h4>Help students succeed</h4>
 				<p>All proceeds will benefit <a href="http://www.cityyear.com">City Year</a>, a national nonprofit which is working to keep students in-school and on-track for a successful high school graduation.</p>
 				<p>Working side-by-side with teachers and students, corps members will engage students in tutoring with reading and math, and by providing after school programming.</p>
 			</div>
@@ -104,16 +100,29 @@
 				<img src="img/watch.svg" alt="1 Face Watch">
 			</div>
 			<div class="grid grid-2 clearfix">
-				
-				<p class="h4">Water you waiting for?</p>
+
+				<h4>Water you waiting for?</h4>
 				<p>Donate $10 or more for a chance to win a <a href="http://1facewatch.com/">1:face Water watch</a>.</p>
-				<p></p>
 			</div>
 			
 		</div>
+	</aside>
+
+	<section role="main">
+		<article role="article">
+			<h3>Article 1</h3>
+			<img src="#" alt="ded" width="500">
+			<p>Lorem ipsum dolor sit amet, consectetur adip* isicing elit, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.</p>
+		</article>
+
+		<article role="article">
+			<h3>Article 2</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adip* isicing elit, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.</p>
+		</article>
+
 	</section>
 
-	</div> <!-- end main -->
+</div>
 
 	<footer role="contentinfo">
 		<small>&copy; 2013 All Rights Reserved.<br>

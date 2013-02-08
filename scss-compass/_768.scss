@@ -17,14 +17,8 @@ header h1 {
 	padding-top: 5.12477%;
 }
 
-figcaption.earned {
+#meter figcaption {
 	@include font-size(19);
-}
-
-.grid p.h4 {
-	text-align: left;
-	@include font-size(20);
-	margin-left: 1.2em;
 }
 
 // 3. COLOUR 				==============================
@@ -47,7 +41,7 @@ figcaption.earned {
 	padding: 1.625em 5.97701%;
 }
 
-[role="main"] p {
+[role="complementary"] p {
 	margin: 1.625em;
 }
 
@@ -66,7 +60,7 @@ figcaption.earned {
 
 // 6. LAYOUT 				==============================
 
-[role="main"] .grids-two .grid {
+[role="complementary"] .grids-two .grid {
 	width: 50%;
 }
 

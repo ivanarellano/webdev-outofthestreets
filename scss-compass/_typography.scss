@@ -60,26 +60,6 @@ font-weight : normal;
 letter-spacing : 1px;
 text-transform : uppercase; }
 
-// header
-
-.header h1,
-.header h2,
-.header h3 {
-float : left;
-margin-right : $gutterwidth;
-
-a {
-display : block;
-position : relative;
-top : 6px;
-float : right;
-padding : 4px 12px;
-@include font-size(14);
-background-color : lighten($basecolor, 75%); }
-
-&:hover {
-background-color : lighten($basecolor, 75%); }
-}
 
 // TYPOGRAPHY ====================================================
 
