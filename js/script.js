@@ -72,9 +72,9 @@
 // = = = = =
 
 //resize meter
-$("#meter").css('height', document.documentElement.clientHeight + 2);
+$("#meter").css('height', window.innerHeight + 2);
 $(window).smartresize(function(){  
-	$("#meter").css('height', document.documentElement.clientHeight + 2);
+	$("#meter").css('height', window.innerHeight + 2);
 });
 
 //fittext
