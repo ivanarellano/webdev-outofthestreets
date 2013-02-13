@@ -1,6 +1,6 @@
 /* Buttons =================================================== */
 
-.btn-blue {
+@mixin btn-blue() {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
@@ -19,6 +19,7 @@
   &:hover {
     @include vertical(#338cba, darken(#0e7bb3, 8%));
     cursor: pointer;
+    color: $white;
   }
 
   &:active {
@@ -30,6 +31,40 @@
   &:visited {
     color: $white;
   }
+}
+
+@mixin btn-light-blue() {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  color: $white;
+  font-family: $basefont;
+  line-height: $baselineheight;
+  text-align: center;
+  @include font-size(13);  
+
+  @include vertical(#58c9ca, darken(#58c9ca, 5%));
+  
+  &:hover {
+    background-color: lighten(#58c9ca, 3%);
+    background-image: none;
+    cursor: pointer;
+    color: $white;
+  }
+
+  &:active {
+    background-color: darken(#58c9ca, 11%);
+    background-image: none;  
+  }
+
+  &:visited {
+    color: $white;
+  }
+}
+
+.btn-blue {
+  @include btn-light-blue();
 }
 
 .btn-info {

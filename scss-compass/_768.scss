@@ -21,6 +21,14 @@ header h1 {
 	@include font-size(19);
 }
 
+article p {
+	@include font-size(16);
+}
+
+.intro em {
+	font-size: 125%;
+}
+
 // 3. COLOUR 				==============================
 // 4. TEXTURE 				==============================
 
@@ -39,14 +47,11 @@ header h1 {
 
 #donate {
 	padding: 1.625em 5.97701%;
+	padding-bottom: 1em;
 }
 
 [role="complementary"] p {
 	margin: 1.625em;
-}
-
-.grid-1.featured-image {
-	height: 10em;
 }
 
 .featured-grid {
@@ -60,17 +65,32 @@ header h1 {
 
 // 6. LAYOUT 				==============================
 
-[role="complementary"] .grids-two .grid {
-	width: 50%;
+@media screen and (max-width: 1024px) {
+	[role="main"] {
+		max-width: 620px;
+	}
+
+	[role="complementary"] .grids-two .grid {
+		width: 50%;
+	}
+
+	[role="complementary"] .description-grid  {
+		.grid-1 { float: right;	}
+		.grid-2 { float: left;	}
+	}
+}
+
+[role="complementary"] {
+	.featured-image.grid {
+		margin-bottom: 1.45em;
+		height: 9.5em;
+	}
 }
 
 [role="contentinfo"] {
 	margin: 2.97701% 5.97701% 0 5.97701%;
 }
 
-.featured-image {
-	height: 10em;
-}
 
 // 7. VENDOR-SPECIFIC 		==============================
 // 8. MODERNIZR 			==============================

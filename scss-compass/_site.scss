@@ -76,14 +76,26 @@ header h1 span {
 .intro em {
 	font-family: "ArvoItalic";
 	font-style: normal;
-	margin: .8em 0;
+	margin: 1.1em 0;
 	display: block;
+	font-size: 125%;
+	background: #1eb1ac;
 	@include header-text-gradient();
-	//color: darken(desaturate($green, 10%), 9%);
 }
 
 .featured-grid h4 {
 	text-align: center;
+}
+
+[role="banner"] h1 a {
+	cursor: pointer;
+	color: white;
+	border: 0;
+
+	&:hover {
+		color: white;
+		border: 0;
+	}
 }
 
 [role="complementary"] {
@@ -150,9 +162,8 @@ span.notch {
 }
 
 #donate {
-	padding: $gutterwidthpercent;
-	padding-bottom: 0;
-	margin: 0 0 1% 0;
+	padding: 4% $gutterwidthpercent;
+	padding-bottom: 1%;
 	@include box-sizing(border-box);	
 }
 
@@ -160,7 +171,7 @@ span.notch {
 	text-align: center;
 	list-style-type: none;
 	text-transform: lowercase;
-	margin-bottom: .3em;
+	margin-bottom: 0;
 
 	li {
 		display: inline-block;
@@ -168,8 +179,9 @@ span.notch {
 	}
 
 	a {
-		@include font-size(19.5);
+		@include font-size(17.5);
 		display: table-row;
+		color: desaturate(lighten($linkcolor, 20%), 60%);
 
 		span {
 			font-size: .7em;
@@ -186,17 +198,14 @@ span.notch {
 		max-height: 13.5em;
 		height: 100%;
 	}
+
+	.featured-image {
+		text-align: center;
+		border: 0;
+		height: 8em;
+	}
 }
 
-.grid-1.featured-image {
-	text-align: center;
-	border: 0;
-	height: 8em;
-}
-
-[role="main"] article {
-	margin: 0 $gutterwidthpercent $gutterwidth $gutterwidthpercent;
-}
 
 // 6. LAYOUT 				==============================
 
@@ -221,16 +230,13 @@ span.notch {
 	height: $headerheight;
 }
 
-[role="main"] {
-	float: left;
-}
-
-[role="complementary"] {
-	float: right;
-}
-
 [role="contentinfo"] {
 	margin: 0 $gutterwidthpercent 0 $gutterwidthpercent;
+
+	small {
+		display: block;
+		margin-top: 1em;
+	}
 }
 
 

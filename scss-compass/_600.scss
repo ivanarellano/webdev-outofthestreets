@@ -20,15 +20,19 @@ footer {
 	text-align: center;
 }
 
-p, small {
+p {
 	@include font-size(15);
+	line-height: 1.5em;
 }
 
 // 3. COLOUR 				==============================
 // 4. TEXTURE 				==============================
 // 5. ELEMENTS 				==============================
 
-
+[role="main"] article img {
+	padding: .5em;
+	max-height: inherit;
+}
 
 // 6. LAYOUT 				==============================
 // 7. VENDOR-SPECIFIC 		==============================

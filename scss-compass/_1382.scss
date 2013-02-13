@@ -1,12 +1,4 @@
-// ==========================================================
-
-// 320 and Up by Andy Clarke
-// Version: 3.0
-// URL: http://stuffandnonsense.co.uk/projects/320andup/
-// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
-
-// ==========================================================
-
+// DESKTOP
 /* 1382 =================================================== */
 
 // 1. ROOT 					==============================
@@ -16,25 +8,13 @@ figcaption.earned {
 	@include font-size(21);
 }
 
-em.fancy {
-	margin-left: 0;
-}
-
 // 3. COLOUR 				==============================
 // 4. TEXTURE 				==============================
 // 5. ELEMENTS 				==============================
-
-.grid-1.featured-image {
-	text-align: center;
-	border: 0;
-	height: 11.5em;
-}
-
 // 6. LAYOUT 				==============================
 
-[role="main"] {
-	max-width: 960px;
-	margin-left: $gutterwidthpercent;
+#main {
+	max-width: 1010px;
 }
 
 // 7. VENDOR-SPECIFIC 		==============================

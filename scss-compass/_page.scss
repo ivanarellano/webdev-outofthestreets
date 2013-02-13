@@ -2,7 +2,10 @@
 
 [role="main"] {
 	article {
+		margin: $gutterwidth $gutterwidthpercent;
+
 		h3 {
+			background: #1eb1ac;
 			@include header-text-gradient();
 			/* h2 style */
 			margin-bottom : .65em;
@@ -16,13 +19,16 @@
 		}
 
 		img {
-			padding: .6em;
-			border: 2px solid #ddd;
-			background-color: #eee;
-			max-height: 15em;
+			padding: .3em;
+			background-color: #ddd;
+			max-height: 16em;
 			margin-bottom: .9em;
 			overflow: hidden;
 			@include box-sizing(border-box);
+		}
+
+		ul, blockquote {
+			margin-left: 0;
 		}
 	}
 
