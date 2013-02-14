@@ -5,7 +5,7 @@
 		margin: $gutterwidth $gutterwidthpercent;
 
 		h3 {
-			background: #1eb1ac;
+			color: #1eb1ac;
 			@include header-text-gradient();
 			/* h2 style */
 			margin-bottom : .65em;
@@ -13,8 +13,13 @@
 			@include font-size(24);
 
 			a { 
-				border: 0; 
-				&:hover { border: 0; } 
+				border: 0;
+				color: #1eb1ac;
+
+				&:hover { 
+					border: 0;
+					color: desaturate(lighten(#1eb1ac, 8%), 4%);
+				} 
 			}
 		}
 

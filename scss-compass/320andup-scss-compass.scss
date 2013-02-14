@@ -87,6 +87,12 @@
 @import "1382";
 }
 
+@media only screen and (max-width: 992px) {
+	[role="complementary"] > div:last-of-type {
+		border-bottom: 1px dashed #C7CED6;
+	}
+}
+
 @media only screen and (min-width: 320px) and (max-width: 767px) {
 	[role="banner"] {
 		background: {
@@ -99,14 +105,17 @@
 
 // phone (landscape)
 @media only screen and (max-height: 320px) and (orientation: landscape) {
-	header h1 { padding-top: 1.97701%; }
+	header h1 { 
+		padding-top: 1%;
+		width: 70%;
+	}
 	header h1 span { display: inline-block; }
-	div#donate { padding-top: 2.5%; }
+	#donate { padding-top: 2.5%; }
 }
 
 // tall screen (desktop/ipad)
 @media only screen and (min-height: 720px) {
-	header[role="banner"] {
+	[role="banner"] {
 		@include background-size(cover);
 	}
 }

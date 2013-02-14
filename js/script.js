@@ -78,4 +78,4 @@ $(window).smartresize(function(){
 });
 
 //fittext
-$("[role='banner'] > h1").fitText(1.1, { minFontSize: '26px', maxFontSize: '75px' });
+$("[role='banner'] > h1").fitText(1.0, { minFontSize: '30px', maxFontSize: '75px' });
