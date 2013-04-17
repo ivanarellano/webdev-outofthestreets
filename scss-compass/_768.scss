@@ -71,11 +71,8 @@ article p {
 	}
 }
 
-[role="complementary"] {
-	.featured-image.grid {
-		margin-bottom: 1.45em;
-		height: 9.5em;
-	}
+.featured-image.grid img {
+	max-height: 11em;
 }
 
 [role="contentinfo"] {
