@@ -34,6 +34,9 @@ line-height : $baselineheight;
 color : $textcolor;
 overflow-x: hidden; }
 
+b, strong {
+	font-family: "LatoBold";
+}
 
 html, body { height: 100%; }
 img { height: auto; }
@@ -240,6 +243,14 @@ span.notch {
 		display: block;
 		margin-top: 1em;
 	}
+}
+
+[role="main"] article:not(:last-child)::after {
+	content: "• • •";
+	text-align: center;
+	display: block;
+	margin: -12px 0 -16px 0;
+	color: #999;
 }
 
 
